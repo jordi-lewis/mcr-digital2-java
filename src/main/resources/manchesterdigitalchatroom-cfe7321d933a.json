@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "manchesterdigitalchatroom",
+  "private_key_id": "cfe7321d933a6d8de84ebfda896d1ecb677222e7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuS7T1NXYoqeHA\n0XTryqE6o3vLjxVqVW2U1sts6AsM45aML31t/2tQquGF4PFua5X/oheDVeIB2LXu\n8iCLzV5p58h1/bSW9q0ayimlxtMTXtSWtVNAZQMQ7RMABJjxsEFHlseZeAeof5ED\npi5YAD96Mmo3mgco/hVPp7613I8Vjubsclvibj8ZMbw+9DgcRd0jkVXbKNQosVwZ\nwLaMCOLb8ddB7MO/kjA0BcyNTIsTToBQDrNGZU8PI+Q3VtjMVax5vDkCbFGVgTFZ\nvM35aIlweBTNpCUsk9yyQHvLROIfEEKxWaiJ7/wvqgNYShPDlWoT4SxXs8FeA/VK\njLu3dCnnAgMBAAECggEAJXQpT6QMXxKaa3fXGzAw00v8NzLpFC+FW72Iez+l2EAz\nwq4V0wRXCD+gNMewudyun/8x9EwJRAJQniczrTcVecaQAiLhoqshaadVqcT+6KOx\nJS2T1TufnAyFz7QtNYp9jKeu/qCXbLL084bLYKe0/EpHHumfbkSjSbmvNp9NtADl\nf+Wu2be54Wq3maJo6F+ignW4UTOUt76Ze6OoazyFLaNvxaKNEBgcaihaebhtbkR8\nyf5dMbMXrSrxqxlvZasMgZARbpdKWrSxzojA3u+IiIF8rACoj1PeU+WciL6frocq\npMhMHsEj4+L8uvjdTgw8TeeE6wRbVIYsO7rpiJxDAQKBgQDTpzmHH2607Wcr9E7R\nfiKsYHSi5XGB7D4zsSqlqu08Ux3zfXolN6bzuitzWm5ldlRw1IyDHn4GiR5ZQiCV\n8yzLZlshrZtO7FDf4KMpJi897jsGvCndANfGrk9PocsLBbRHVJ5f/3aF0b9nlilA\nF6uBfcAoLnlGIWxIY8ikrOjdgQKBgQDS0K4MDT6f33gppwteiFBmscQj4fVh2FaP\nTz5bNftgi+gh6p2USPcrfi75MxsYRrAFS0eY4LtJLFasiB/NZhEnYHrLex9XFE97\n7rzWjCQEqygcWOSO4h/aUsND7qrbv/aCbN/p59TnZZb6ifKTvcXWTAClAggj7iCY\nmTKysH6LZwKBgEZk1uBXFvX8A5V94v0QK64TQpevIippDWMZ6KpDCDZJGqwSLp7U\nPKXRZIQwLol2aq1ANB+j85xu3HYpZTcaMurPdz3jRMViGZ/sUbfs6Ed7xYv+5xmH\nHz0IWn6MvEBFPGmA/k/FYoEterCUI9IaTUN7NH7ovhMSKLaG4YPLsoOBAoGAKs4a\nePH7hETAxlxXr6MoCCISPGL2Cx79PG4PsD9+wjTGNpTH2EMUhO1DJnBdEQnRVdHa\nQM1o2cu58aBWLMOLuh4Z8NUYIPtLxFNOXpXn/laud0sJZYW+h/sEEPgWEzagHA11\nTa44CaAUDt0RtzPyRrf57YdDFeCVF8cLh0LU/wMCgYEAwdhtaLuCencw55K0kumv\npJUlegREj11yNeg5L6trUpcFgpNN1h7LnM78rHU2a7grdBEDZxw8lTHTRgeLDQrS\nb3YsLLwdW7nUN6WbcY//8ORw63YAWnc6zXaz+inZ46ovXw8tjocCcKPlUM0tdoIP\ng5Y+hZitUsIh4QVUgeAJbSc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "macncheserdigitalchat@manchesterdigitalchatroom.iam.gserviceaccount.com",
+  "client_id": "114519194831071639633",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/macncheserdigitalchat%40manchesterdigitalchatroom.iam.gserviceaccount.com"
+}
