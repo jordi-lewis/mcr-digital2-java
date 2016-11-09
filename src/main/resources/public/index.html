@@ -1,17 +1,32 @@
 <html>
 <head>
-    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!--<script src="main.js"></script>-->
+    <title>Space Chat</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
 <body style="background-image: url(assets/Background.jpg); background-size: cover;">
     <div class="login-page" id="login_box">
         <div class="form" style="margin-top: 18%;">
             <em><h1>space 'n' shit</h1></em>
-            <form class="login-form">
-                <input type="text" placeholder="Today is a better yesterday" style="border-radius: 8px;"/>
-                <button style="background-color: #15004c;border-radius: 8px;">login</button>
+            <form id="login-form" method="post" action="#" class="login-form">
+                <input id="user-input" type="text" placeholder="today is a better yesterday" style="border-radius: 8px;"/>
+                <input id="login" type="button" style="background-color: #15004c;border-radius: 8px;" name="login" value="Submit" onclick="myFunction()"></input>
             </form>
         </div>
     </div>
+<script type="application/javascript">
+
+    function myFunction() {
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/user",
+        data: '{"username": "' + $("#user-input").val() + '"}',
+        contentType: "application/json; charset=utf-8",
+        success: null,
+        dataType:"json"
+    });
+}
+</script>
 </body>
 </html>
