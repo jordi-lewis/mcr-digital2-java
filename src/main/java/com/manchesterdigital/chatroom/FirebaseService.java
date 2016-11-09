@@ -16,7 +16,8 @@ import java.util.UUID;
 @Named
 public class FirebaseService {
 
-    private static final String DB_URL = "https://error404teamnamenotfoundchat.firebaseio.com/user.json?auth=2Fwv6XMZ4wUchEp6iASb2LVOsGSKiDoqHHrbmqQy";
+    private static final String DB_USER_URL = "https://error404teamnamenotfoundchat.firebaseio.com/user.json?auth=2Fwv6XMZ4wUchEp6iASb2LVOsGSKiDoqHHrbmqQy";
+    private static final String DB_MESSAGES_URL = "https://error404teamnamenotfoundchat.firebaseio.com/messages.json?auth=2Fwv6XMZ4wUchEp6iASb2LVOsGSKiDoqHHrbmqQy";
 
     // TEMP this needs to be the actual message service
     Map<String, String> messages = new HashMap<>();
@@ -43,7 +44,7 @@ public class FirebaseService {
         messages.put(messageId, message);
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> response = restTemplate.postForEntity(DB_URL, message, String.class);
+        ResponseEntity<String> response = restTemplate.postForEntity(DB_MESSAGES_URL, message, String.class);
 
         return messageId;
     }
@@ -58,7 +59,7 @@ public class FirebaseService {
         users.put(userId, user);
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> response = restTemplate.postForEntity(DB_URL, user, String.class);
+        ResponseEntity<String> response = restTemplate.postForEntity(DB_USER_URL, user, String.class);
 
         return userId;
     }

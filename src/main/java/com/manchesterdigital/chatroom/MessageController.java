@@ -30,19 +30,19 @@ public class MessageController {
         return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping(method=RequestMethod.GET, produces = "Application/json", value="messages")
+    @RequestMapping(method=RequestMethod.GET, produces = "Application/json", value="message")
     public @ResponseBody
     Map<String, String> getAllMessages() {
 
         Map<String, String> allMessages = new HashMap<>();
         allMessages.putAll(firebaseService.getAllMessages());
 
-        logger.debug("Returning {} messages", allMessages.size());
+        logger.debug("Returning {} users", allMessages.size());
 
         return allMessages;
     }
 
-    @RequestMapping(method= RequestMethod.POST, produces = "Application/json", value="messages")
+    @RequestMapping(method= RequestMethod.POST, produces = "Application/json", value="message")
     public ResponseEntity<?> addMessage(@RequestBody String message) {
 
         String messageId = firebaseService.addMessage(message);
@@ -53,8 +53,7 @@ public class MessageController {
         model.put("id", messageId);
         model.put("content", message);
 
-        logger.debug("created message ID {}", messageId);
-
+        logger.debug("created user ID {}", messageId);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(messageId).toUri();
         return ResponseEntity.created(location).build();
