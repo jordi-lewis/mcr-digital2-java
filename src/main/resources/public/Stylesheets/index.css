@@ -4,7 +4,14 @@
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
+  vertical-align: center;
 }
+
+#login_box{
+    opacity: 0.65;
+
+}
+
 .form {
   position: relative;
   z-index: 1;
@@ -42,7 +49,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background:;
 }
 .form .message {
   margin: 15px 0 0;
