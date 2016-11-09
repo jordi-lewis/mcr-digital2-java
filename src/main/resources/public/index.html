@@ -1,6 +1,8 @@
 <html>
 <head>
-    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <!--<script src="main.js"></script>-->
+    <title>Space Chat</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
 <body style="background-image: url(assets/Background.jpg); background-size: cover;">
@@ -12,9 +14,22 @@
             <em><h1>Space chat 'n' chill</h1></em>
             <form class="login-form">
                 <input type="text" placeholder="Today is a better yesterday" style="border-radius: 8px;"/>
-                <button style="background-color: #15004c; border-radius: 8px; color: white;">login</button>
+                <input id="login" type="button" style="background-color: #15004c;border-radius: 8px;" name="login" value="Submit" onclick="myFunction()"></input>
             </form>
         </div>
     </div>
+<script type="application/javascript">
+
+    function myFunction() {
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/user",
+        data: '{"username": "' + $("#user-input").val() + '"}',
+        contentType: "application/json; charset=utf-8",
+        success: null,
+        dataType:"json"
+    });
+}
+</script>
 </body>
 </html>
