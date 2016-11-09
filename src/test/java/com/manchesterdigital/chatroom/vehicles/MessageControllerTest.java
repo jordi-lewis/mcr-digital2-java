@@ -21,7 +21,7 @@ public class MessageControllerTest {
 
     public static final String ROOT_URL = "/";
     private static final String MESSAGE = "first test message";
-    private static final String MESSAGES_URL = "/messages";
+    private static final String MESSAGES_URL = "/message";
 
     @Inject
     private TestRestTemplate restTemplate;
