@@ -1,4 +1,4 @@
-// $.ajax({
+git // $.ajax({
 //     type: "POST",
 //     url: url,
 //     data: data,
