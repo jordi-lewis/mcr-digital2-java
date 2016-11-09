@@ -43,7 +43,7 @@ public class FirebaseService {
         messages.put(messageId, message);
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> response = restTemplate.postForEntity(DB_URL, "{\"message\":\"first message\"}", String.class);
+        ResponseEntity<String> response = restTemplate.postForEntity(DB_URL, message, String.class);
 
         return messageId;
     }
