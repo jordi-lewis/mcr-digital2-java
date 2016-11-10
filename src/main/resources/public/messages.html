@@ -12,11 +12,13 @@
             <div id="messages_title" >
                 <em><h1>Chat 'n' stuff ;)</h1></em>
             </div>
-            <div style="border: 1px solid lightgrey; border-radius: 2px; width: 87%; height: 72%; margin: 0 auto 20px auto;">
-                <h1></h1>
+            <div id="messagesDiv" style="border: 1px solid lightgrey; border-radius: 2px; width: 87%; height: 72%; margin: 0 auto 20px auto; text-align: left; padding-left: 18px; ">
+                <div id="messagethingy" style="overflow: scroll;">
+
+                </div>
             </div>
             <div>
-                <input type="text" id="message-text" placeholder="After reading the dictionary, every book is a remix" style="display: inline-block; width: 77%; height: 24px; border: 1px solid lightgrey; border-radius: 2px;"/>
+                <input type="text" id="message-text" placeholder="After reading the dictionary, every book is a remix" style="display: inline-block; width: 79%; height: 24px; border: 1px solid lightgrey; border-radius: 2px;"/>
                 <button style="display: inline-block; width: 10%; height: 24px; color: white; background-color: #15004c; border: none; border-radius: 2px;" onclick="loadscript()">SEND</button>
             </div>
         </div>
@@ -33,10 +35,37 @@
                 type: "POST",
                 url: "/message",
                 data: json,
-                success: null,
+                success: function () {
+                    window.location.href = "/messages.html";
+                },
                 dataType: "json",
                 contentType: "application/json; charset=utf-8"
             });
+        }
+    </script>
+
+    <script>
+        function printMessages(data){
+            $.each(data, function(index, message){
+                $("#messagethingy").append("<br> " + message.text)
+            })
+        }
+
+        function loadMessages(){
+            $.ajax({
+                type: "GET",
+                url: "/message",
+                data: null,
+                success: function (data) {
+                    printMessages(data);
+                },
+                dataType: "json",
+                contentType: "application/json; charset=utf-8"
+            });
+        }
+
+        window.onload = function () {
+            loadMessages();
         }
     </script>
 </body>
