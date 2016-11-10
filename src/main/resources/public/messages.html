@@ -19,7 +19,7 @@
             </div>
             <div>
                 <input type="text" id="message-text" placeholder="After reading the dictionary, every book is a remix" style="display: inline-block; width: 79%; height: 24px; border: 1px solid lightgrey; border-radius: 2px;"/>
-                <button style="display: inline-block; width: 10%; height: 24px; color: white; background-color: #15004c; border: none; border-radius: 2px;" onclick="loadscript()">SEND</button>
+                <button style="display: inline-block; width: 10%; height: 24px; color: white; background-color: #15004c; border: none; border-radius: 2px;" onclick="loadscript(), loadMessages()">SEND</button>
             </div>
         </div>
     </div>
@@ -35,9 +35,7 @@
                 type: "POST",
                 url: "/message",
                 data: json,
-                success: function () {
-                    window.location.href = "/messages.html";
-                },
+                success: null,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8"
             });
@@ -62,6 +60,7 @@
                 dataType: "json",
                 contentType: "application/json; charset=utf-8"
             });
+            $( "#messagethingy" ).empty();
         }
 
         window.onload = function () {
