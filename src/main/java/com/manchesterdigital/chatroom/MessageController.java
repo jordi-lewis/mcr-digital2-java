@@ -35,21 +35,23 @@ public class MessageController {
     @RequestMapping(method=RequestMethod.GET, produces = "Application/json", value="message")
     public @ResponseBody
     List<Message> getAllMessages() {
-        List<Message> messages = new ArrayList<Message>();
-        Message message = new Message();
-        message.setText("Hello");
-        messages.add(message);
-        Message message1 = new Message();
-        message1.setText("space 'n' shit");
-        messages.add(message1);
-        Message message2 = new Message();
-        message2.setText("rdxtcyvubino");
-        messages.add(message2);
 
-        Map<String, String> allMessages = new HashMap<>();
+        List<Message> messages = firebaseService.getAllMessages();
+
+//        Message message = new Message();
+//        message.setText("Hello");
+//        messages.add(message);
+//        Message message1 = new Message();
+//        message1.setText("space 'n' shit");
+//        messages.add(message1);
+//        Message message2 = new Message();
+//        message2.setText("rdxtcyvubino");
+//        messages.add(message2);
+
+//        Map<String, String> allMessages = new HashMap<>();
 //        allMessages.putAll(firebaseService.getAllMessages());
 
-        logger.debug("Returning {} users", allMessages.size());
+        logger.debug("Returning {} message", messages.size());
 
         return messages;
     }
