@@ -14,6 +14,7 @@ function loadscript(){
 }
 
 function printMessages(data){
+    $( "#messagethingy" ).empty();
     $.each(data, function(index, message){
         $("#messagethingy").append("<br> " + message.text)
     })
@@ -30,11 +31,11 @@ function loadMessages(){
         dataType: "json",
         contentType: "application/json; charset=utf-8"
     });
-    $( "#messagethingy" ).empty();
+
 }
 
 window.onload = function () {
-        loadMessages();
+        timeout();
 }
 
 function timeout() {
