@@ -24,11 +24,13 @@
     function myFunction() {
     $.ajax({
         type: "POST",
-        url: "http://localhost:8080/user",
+        url: "/user",
         data: '{"username": "' + $("#user-input").val() + '"}',
         contentType: "application/json; charset=utf-8",
-        success: null,
-        dataType:"json"
+        success: function () {
+            window.location.href = "/messages.html";
+        },
+        dataType: "json"
     });
 }
 </script>
