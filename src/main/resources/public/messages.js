@@ -35,7 +35,16 @@ function loadMessages(){
 
 window.onload = function () {
         loadMessages();
-    }
+}
+
+function timeout() {
+    setTimeout(function () {
+        loadMessages();
+        timeout();
+    }, 1000);
+}
+
+
 
 
 
