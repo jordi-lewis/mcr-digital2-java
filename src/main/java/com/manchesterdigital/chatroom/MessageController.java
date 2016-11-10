@@ -9,10 +9,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.inject.Inject;
 import java.io.FileNotFoundException;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class MessageController {
@@ -37,19 +34,12 @@ public class MessageController {
     List<Message> getAllMessages() {
 
         List<Message> messages = firebaseService.getAllMessages();
-
-//        Message message = new Message();
-//        message.setText("Hello");
-//        messages.add(message);
-//        Message message1 = new Message();
-//        message1.setText("space 'n' shit");
-//        messages.add(message1);
-//        Message message2 = new Message();
-//        message2.setText("rdxtcyvubino");
-//        messages.add(message2);
-
-//        Map<String, String> allMessages = new HashMap<>();
-//        allMessages.putAll(firebaseService.getAllMessages());
+        messages.sort(new Comparator<Message>() {
+            @Override
+            public int compare(Message o1, Message o2) {
+                return Long.compare(o1.getDate(), o2.getDate());
+            }
+        });
 
         logger.debug("Returning {} message", messages.size());
 
