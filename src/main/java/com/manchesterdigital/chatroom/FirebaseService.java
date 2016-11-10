@@ -45,6 +45,7 @@ public class FirebaseService {
         for (FirebaseMessage fbMessage :  reader.readMessages(jsonMessages.getBody())) {
             Message message = new Message();
             message.setText(fbMessage.getMessage());
+            message.setDate(fbMessage.getDate());
             response.add(message);
         }
 
@@ -60,9 +61,10 @@ public class FirebaseService {
 
         FirebaseMessage fbMessage = new FirebaseMessage();
         fbMessage.setMessage(messageStr);
+        fbMessage.setDate(new Date().getTime());
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> response = restTemplate.postForEntity(DB_MESSAGES_URL, messageStr, String.class);
+        ResponseEntity<FirebaseMessage> response = restTemplate.postForEntity(DB_MESSAGES_URL, fbMessage, FirebaseMessage.class);
 
         return messageId;
     }

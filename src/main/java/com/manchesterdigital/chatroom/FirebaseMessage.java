@@ -5,6 +5,7 @@ package com.manchesterdigital.chatroom;
  */
 public class FirebaseMessage {
     private String message;
+    private long date;
 
     public String getMessage() {
         return message;
@@ -12,5 +13,13 @@ public class FirebaseMessage {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public long getDate() {
+        return date;
+    }
+
+    public void setDate(long date) {
+        this.date = date;
     }
 }

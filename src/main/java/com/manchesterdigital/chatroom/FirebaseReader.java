@@ -20,8 +20,10 @@ public class FirebaseReader {
         while (it.hasNext()) {
             String key = it.next();
             String value = jsonObject.getJSONObject(key).getString("message");
+            long date = jsonObject.getJSONObject(key).getLong("date");
 
             FirebaseMessage message = new FirebaseMessage();
+            message.setDate(date);
             message.setMessage(value);
             messages.add(message);
         }
