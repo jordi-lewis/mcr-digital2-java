@@ -1,7 +1,7 @@
 <html>
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <!--<script src="main.js"></script>-->
+    <script src="main.js"></script>
     <title>Space Chat</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
@@ -18,20 +18,7 @@
             </form>
         </div>
     </div>
-<script type="application/javascript">
+<script type="application/javascript"></script>
 
-    function myFunction() {
-    $.ajax({
-        type: "POST",
-        url: "/user",
-        data: '{"username": "' + $("#user-input").val() + '"}',
-        contentType: "application/json; charset=utf-8",
-        success: function () {
-            window.location.href = "/messages.html";
-        },
-        dataType: "json"
-    });
-}
-</script>
 </body>
 </html>

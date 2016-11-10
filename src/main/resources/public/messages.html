@@ -1,6 +1,7 @@
 <html>
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="messages.js"></script>
 
     <title></title>
     <link rel="stylesheet" type="text/css" href="stylesheets/messages.css">
@@ -35,50 +36,5 @@
             <button id="buttonthing" onclick="loadscript(), loadMessages()">SEND</button>
         </div>
     </div>
-
-
-    <script>
-        function loadscript(){
-
-            var myObj = {};
-            myObj["message"] = $("#message-text").val();
-            var json = JSON.stringify(myObj);
-
-            $.ajax({
-                type: "POST",
-                url: "/message",
-                data: json,
-                success: null,
-                dataType: "json",
-                contentType: "application/json; charset=utf-8"
-            });
-        }
-    </script>
-
-    <script>
-        function printMessages(data){
-            $.each(data, function(index, message){
-                $("#messagethingy").append("<br> " + message.text)
-            })
-        }
-
-        function loadMessages(){
-            $.ajax({
-                type: "GET",
-                url: "/message",
-                data: null,
-                success: function (data) {
-                    printMessages(data);
-                },
-                dataType: "json",
-                contentType: "application/json; charset=utf-8"
-            });
-            $( "#messagethingy" ).empty();
-        }
-
-        window.onload = function () {
-            loadMessages();
-        }
-    </script>
 </body>
 </html>

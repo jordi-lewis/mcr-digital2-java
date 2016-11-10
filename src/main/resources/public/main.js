@@ -30,6 +30,19 @@ $("#login").click(function() {
     });
 });
 
+function myFunction() {
+    $.ajax({
+        type: "POST",
+        url: "/user",
+        data: '{"username": "' + $("#user-input").val() + '"}',
+        contentType: "application/json; charset=utf-8",
+        success: function () {
+            window.location.href = "/messages.html";
+        },
+        dataType: "json"
+    });
+}
+
 
 
 
