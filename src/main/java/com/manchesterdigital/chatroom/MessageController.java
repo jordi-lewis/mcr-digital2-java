@@ -9,7 +9,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.inject.Inject;
 import java.io.FileNotFoundException;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -32,14 +34,24 @@ public class MessageController {
 
     @RequestMapping(method=RequestMethod.GET, produces = "Application/json", value="message")
     public @ResponseBody
-    Map<String, String> getAllMessages() {
+    List<Message> getAllMessages() {
+        List<Message> messages = new ArrayList<Message>();
+        Message message = new Message();
+        message.setText("Hello");
+        messages.add(message);
+        Message message1 = new Message();
+        message1.setText("space 'n' shit");
+        messages.add(message1);
+        Message message2 = new Message();
+        message2.setText("rdxtcyvubino");
+        messages.add(message2);
 
         Map<String, String> allMessages = new HashMap<>();
-        allMessages.putAll(firebaseService.getAllMessages());
+//        allMessages.putAll(firebaseService.getAllMessages());
 
         logger.debug("Returning {} users", allMessages.size());
 
-        return allMessages;
+        return messages;
     }
 
     @RequestMapping(method= RequestMethod.POST, produces = "Application/json", value="message")
