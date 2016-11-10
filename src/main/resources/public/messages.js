@@ -16,7 +16,7 @@ function loadscript(){
 function printMessages(data){
     $( "#messagethingy" ).empty();
     $.each(data, function(index, message){
-        $("#messagethingy").append("<br> " + message.text)
+        $("#messagethingy").append("<p style="margin-bottom: 5px;">" + message.text + "</p>")
     })
 }
 
