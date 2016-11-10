@@ -1,14 +1,10 @@
 
 function loadscript(){
 
-    var myObj = {};
-    myObj["message"] = $("#message-text").val();
-    var json = JSON.stringify(myObj);
-
     $.ajax({
         type: "POST",
         url: "/message",
-        data: json,
+        data: $("#message-text").val(),
         success: function(){
             loadMessages();
         },
