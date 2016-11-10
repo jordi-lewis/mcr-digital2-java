@@ -3,6 +3,8 @@
 body{
     font-family: "Roboto", sans-serif;
     margin: 0 0 0 0;
+    background-image: url(../assets/Background.jpg);
+    background-size: cover;
 }
 
 div#main_div{
@@ -18,4 +20,41 @@ div#main_div{
 
 div#messages_title{
     padding-top: 1%;
+}
+
+div#messagesDiv{
+    border: 1px solid lightgrey;
+    border-radius: 2px; width: 87%;
+    height: 72%;
+    margin: 0 auto 20px auto;
+    text-align: left;
+    padding-left: 18px;
+}
+
+div#messagethingy{
+    overflow: scroll;
+}
+
+input#message-text{
+    display: inline-block;
+    width: 79%;
+    height: 24px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+
+button#buttonthing{
+    display: inline-block;
+    width: 10%;
+    height: 24px;
+    color: white;
+    background-color: #15004c;
+    border: none;
+    border-radius: 2px;
+
+    transition:all 0.3s ease;
+}
+
+button#buttonthing:active{
+    background-color: #27008e;
 }
