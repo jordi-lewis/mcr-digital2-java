@@ -96,8 +96,19 @@ button#buttonthing{
     background-color: #15004c;
     border: none;
     border-radius: 2px;
-
     transition:all 0.3s ease;
+}
+
+button#deletebutton{
+    display: inline-block;
+    width: 10%;
+    height: 24px;
+    color: white;
+    background-color: #15004c;
+    border: none;
+    border-radius: 2px;
+    transition:all 0.3s ease;
+    margin-top: 40px;
 }
 
 button#buttonthing:active{

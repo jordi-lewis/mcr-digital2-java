@@ -13,8 +13,11 @@
                 <em><h3>space 'n' shit</h3></em>
             </li>
             <li class="nav" id="navimg">
-                <img src="http://i60.tinypic.com/mwza5t.gif" height="32" width="32" style="margin-top: 20px;">
+                <img src="http://i60.tinypic.com/mwza5t.gif" height="32" width="32" usemap="#image-map" style="margin-top: 20px;">
             </li>
+            <map name="image-map">
+                <area target="_self" alt="" title="" href="https://www.google.co.uk/" coords="150,106,NaN" shape="circle">
+            </map>
             <li class="nav" id="navright">
                 <em><h5>
                     <a href="index.html">Sign out my man</a>
@@ -34,6 +37,7 @@
         <div>
             <input type="text" id="message-text" placeholder="After reading the dictionary, every book is a remix"/>
             <button id="buttonthing" onclick="loadscript()">SEND</button>
+            <button id="deletebutton" onclick="clearMessages()">DELETE </button>
         </div>
     </div>
 </body>

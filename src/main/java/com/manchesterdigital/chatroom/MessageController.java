@@ -62,5 +62,4 @@ public class MessageController {
                 .path("/{id}").buildAndExpand(messageId).toUri();
         return ResponseEntity.created(location).build();
     }
-
 }
